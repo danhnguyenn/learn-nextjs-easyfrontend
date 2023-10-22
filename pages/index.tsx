@@ -1,7 +1,4 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import { useRouter } from "next/dist/client/router";
 
@@ -20,11 +17,11 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <div
+      {/* <div
         style={{
           marginTop: "2000px",
         }}
-      ></div>
+      ></div> */}
       <Link href="/about">
         <a>About US</a>
       </Link>
