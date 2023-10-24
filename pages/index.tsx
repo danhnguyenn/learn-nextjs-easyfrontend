@@ -1,8 +1,10 @@
 import type { NextPage } from "next";
 import Link from "next/link";
 import { useRouter } from "next/dist/client/router";
+import { MainLayout } from "@/components/layout";
+import { NextPageWithLayout } from "../models";
 
-const Home: NextPage = () => {
+const Home: NextPageWithLayout = () => {
   const router = useRouter();
 
   function goToDetailPage() {
@@ -17,19 +19,11 @@ const Home: NextPage = () => {
 
   return (
     <>
-      {/* <div
-        style={{
-          marginTop: "2000px",
-        }}
-      ></div> */}
-      <Link href="/about">
-        <a>About US</a>
-      </Link>
-      <br />
-
       <button onClick={goToDetailPage}>Go to detail Page</button>
     </>
   );
 };
+
+Home.Layout = MainLayout;
 
 export default Home;
