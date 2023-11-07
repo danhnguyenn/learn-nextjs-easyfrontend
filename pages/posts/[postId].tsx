@@ -20,7 +20,15 @@ export default function PostDetailPage({ post }: PostDetailPageProps) {
   return (
     <div>
       <h1>Post Detail Page</h1>
-      <Image alt={post.title} src={post.imageUrl} width={200} height={200} />
+      <Image
+        alt={post.title}
+        src={
+          post.imageUrl ||
+          "https://t3.ftcdn.net/jpg/04/34/72/82/360_F_434728286_OWQQvAFoXZLdGHlObozsolNeuSxhpr84.webp"
+        }
+        width={200}
+        height={200}
+      />
       <p>
         {post.title} - {post.author}
       </p>
