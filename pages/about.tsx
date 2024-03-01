@@ -1,5 +1,5 @@
-import Header from "@/components/common/header";
-import { MainLayout } from "@/components/layout";
+import { Header } from "@/components/common";
+import { AdminLayout, MainLayout } from "@/components/layout";
 import { useRouter } from "next/dist/client/router";
 import { useEffect, useState } from "react";
 
@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 //   ssr: false,
 // });
 
-export interface IAboutProps {}
+export interface IAboutProps { }
 
 export default function AboutPage(props: IAboutProps) {
   const router = useRouter();
@@ -56,7 +56,7 @@ export default function AboutPage(props: IAboutProps) {
   );
 }
 
-AboutPage.Layout = MainLayout;
+AboutPage.Layout = AdminLayout;
 
 export async function getStaticProps() {
   console.log("Get static Props");
